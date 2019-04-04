@@ -1,10 +1,10 @@
-vsphere_host: 49.254.105.42
+vsphere_host: 49.254.105.229
 vsphere_user: administrator@vsphere.local
-vsphere_password: Netapp123!
-vsphere_datacenter: CDS_NetApp_KR
-esxi_hostname: 49.254.105.28
+vsphere_password: NetApp1!
+vsphere_datacenter: NetApp-HCI-Datacenter
+esxi_hostname: 49.254.105.172
 vsphere_folder: Discovered virtual machine
-vsphere_datastore: CDS_datastore
+vsphere_datastore: Ansible_DATASTORE
 guest_network1: data_port
 guest_network2: private_network
 guest_id: centos7_64Guest
