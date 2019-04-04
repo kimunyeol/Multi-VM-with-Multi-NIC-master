@@ -3,24 +3,24 @@ vsphere_user: administrator@vsphere.local
 vsphere_password: NetApp1!
 vsphere_datacenter: NetApp-HCI-Datacenter
 esxi_hostname: 49.254.105.172
-vsphere_folder: Discovered virtual machine
+# vsphere_folder: Discovered virtual machine
 vsphere_datastore: Ansible_DATASTORE
-guest_network1: data_port
-guest_network2: private_network
+guest_network1: HCI_Internal_vCenter_Network
+guest_network2: VM_Network
 guest_id: centos7_64Guest
 guest_memory: 2048  
 guest_vcpu: 2
-guest_template: CentOS7.6_for_K8S
+guest_template: CentOS6.7_k8s_copy
 vms:
   master:
     vmhost: master
     vmip1: 49.254.105.180
-    vmip2: 10.10.1.11
+    vmip2: 10.1.1.70
   node1:
     vmhost: node1
     vmip1: 49.254.105.181
-    vmip2: 10.10.1.12
+    vmip2: 10.1.1.71
   node2:
     vmhost: node2
     vmip1: 49.254.105.182 
-    vmip2: 10.10.1.13
+    vmip2: 10.1.1.72
