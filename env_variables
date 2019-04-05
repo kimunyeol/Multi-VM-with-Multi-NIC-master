@@ -6,7 +6,7 @@ esxi_hostname: 49.254.105.172
 vsphere_folder: K8S_Host
 vsphere_datastore: Ansible_DATASTORE
 guest_network1: HCI_Internal_vCenter_Network
-guest_network2: VM_Network
+guest_network2: test
 guest_id: centos7_64Guest
 guest_memory: 2048  
 guest_vcpu: 2
