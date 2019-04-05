@@ -32,9 +32,9 @@
       - name: '{{ guest_network2 }}'
         ip: '{{ item.value.vmip2 }}'
         netmask: 255.255.255.0
-        gateway: 49.254.105.1 
-        dns_servers:
-        - 49.254.105.4
+#        gateway: 49.254.105.1 
+#        dns_servers:
+#        - 49.254.105.4
 #        - 168.126.63.1        
       hardware:
         memory_mb: '{{ guest_memory }}'
