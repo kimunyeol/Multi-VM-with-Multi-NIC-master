@@ -22,7 +22,7 @@
         type: thin
         datastore: '{{ vsphere_datastore }}'
       networks:
-      - name: '{{ guest_network1 }}'
+       - name: '{{ guest_network1 }}'
         ip: '{{ item.value.vmip1 }}'
         netmask: 255.255.255.0
         gateway: 49.254.105.1
@@ -31,11 +31,18 @@
         - 168.126.63.1
       - name: '{{ guest_network2 }}'
         ip: '{{ item.value.vmip2 }}'
-        netmask: 255.255.255.0       
+        netmask: 255.255.255.0
+        gateway: 10.10.1.1 
+        dns_servers:
+        - 8.8.8.8
+        - 168.126.63.1          
       hardware:
         memory_mb: '{{ guest_memory }}'
         num_cpus: '{{ guest_vcpu }}'
       customization:
+        dns_servers:
+        - 8.8.8.8
+        - 168.126.63.1
         domain : vsphere.local
         hostname: '{{ item.value.vmhost }}'
       template: '{{  guest_template  }}'
